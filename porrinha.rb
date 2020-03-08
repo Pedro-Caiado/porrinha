@@ -60,3 +60,4 @@ else
 
 # pc_number = randon.rand (5) + 1
 
+puts "Hi"
