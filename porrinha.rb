@@ -3,42 +3,37 @@ require 'io/console'
 
 
 # Class Players [] 
+def checking_input(message)
+    correct_input = false
+    while correct_input == false
+        puts message
+        input = gets.chomp 
+        if input == "" 
+            puts "invalid"
+        else
+            correct_input = true
+        end
+    end
+    return input
+end
+
 
 def greeting_players
-    correct_input = false
-    while correct_input == false
-        puts "Enter your name player_1:"
-        player_1 = gets.chomp 
-        if player_1 == "" 
-            puts "invalid"
-        else
-            correct_input = true
-        end
-    end
-    correct_input = false
-    while correct_input == false
-    puts "Enter your name player_2"
-    player_2 = gets.chomp
-        if player_2 == ""
-            puts "invalid"
-        else
-            correct_input = true
-        end
-    end
+    player_1 = checking_input("Enter your name player_1")
+    player_2 = checking_input("Enter your name player_2")
 
     puts "WELCOME, #{player_1} and #{player_2}!".colorize(:red)
     input = gets.chomp
     puts "\e[H\e[2J"
 
     puts "Have you guys been drinking today? (y/n)"
-    input = gets.chomp	
+    input = gets.chomp	# need to check input
     if input == "y"
         system('clear')
         puts "Great, you are ready to play!!"
         puts "First player will be doing the first call."
         sleep 1
         return [player_1, player_2]
-        # game_strategy(player_1, player_2)
     elsif input == "n"
         puts "\e[H\e[2J"
         puts "go and a get a 
