@@ -5,12 +5,26 @@ require 'io/console'
 # Class Players [] 
 
 def greeting_players
-
-    puts "Type your name player_1:"
-    player_1 = gets.chomp # """
-while 
-    puts "Type your name player_2"
+    correct_input = false
+    while correct_input == false
+        puts "Enter your name player_1:"
+        player_1 = gets.chomp 
+        if player_1 == "" 
+            puts "invalid"
+        else
+            correct_input = true
+        end
+    end
+    correct_input = false
+    while correct_input == false
+    puts "Enter your name player_2"
     player_2 = gets.chomp
+        if player_2 == ""
+            puts "invalid"
+        else
+            correct_input = true
+        end
+    end
 
     puts "WELCOME, #{player_1} and #{player_2}!".colorize(:red)
     input = gets.chomp
