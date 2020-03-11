@@ -17,6 +17,15 @@ def checking_input(message)
     return input
 end
 
+def getting_input_number(text, sticks)
+    puts text
+    hand_player1 = STDIN.noecho(&:gets).chomp.to_i
+    while hand_player1 <= 0 or hand_player1 >= sticks
+        guess1 <=0 or guess1 >= sticks1
+        puts "Invalid, try it again"
+    end
+end
+
 
 def greeting_players
     player_1 = checking_input("Enter your name player_1")
@@ -27,6 +36,7 @@ def greeting_players
 
     input = checking_input("Have you guys been drinking today? (y/n)")
 
+    input = gets.chomp
     if input == "y"
         system('clear')
         puts "Great, you are ready to play!!"
@@ -48,30 +58,19 @@ def game_strategy(player_1, player_2)
 
     puts "HOW MANY STICKS WILL YOU SHOW THE OTHER PLAYER?"
     
-    puts "#{player_1}, type the number of sticks in your hand ___:" 
-    hand_player1 = STDIN.noecho(&:gets).chomp.to_i
-    while hand_player1 <=0 or hand_player1 >=4
-        puts "Invalid, try it again"
-        hand_player1 = STDIN.noecho(&:gets).chomp.to_i
-    end
+    getting_input_number("#{player_1}, type the number of sticks in your hand ___:", 4)
+    getting_input_number("#{player_2},type the number of sticks in your hand? ___:", 4)
+    getting_input_number("#{player_1}, What's your guess? ___:", 6)
+    getting_input_number("#{player_2}, What's your guess? ___:", 6)
 
-    puts "#{player_2}, type the number of sticks in your hand? ___:"
-    hand_player2 = STDIN.noecho(&:gets).chomp.to_i
-    while hand_player2 <=0 or hand_player2 >=4
-    
-        puts "Invalid, try it again"
-        hand_player2 = STDIN.noecho(&:gets).chomp.to_i
-    end
-
-
-    puts "#{player_1}, What's your guess? ___:"
+    puts 
     guess1 = gets.chomp.to_i
     while guess1 <=0 or guess1 >=6
         puts "Invalid, try it again"
         guess1 = gets.chomp.to_i
     end
 
-    puts "#{player_2}, What's your guess? ___:"
+    puts 
     guess2 = gets.chomp.to_i
     while guess2 <=0 or guess2 >=6
         puts "Invalid, try it again"
