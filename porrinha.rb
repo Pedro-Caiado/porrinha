@@ -54,10 +54,9 @@ def greeting_players
     end
 end
 
-
+play_again = "yes"
+while play_again == "yes"
 def game_strategy(player_1, player_2)
-    new_game = "yes"
-    while new_game == "yes"
     
     puts "HOW MANY STICKS WILL YOU SHOW THE OTHER PLAYER?"
     
@@ -82,8 +81,7 @@ def game_strategy(player_1, player_2)
         puts "No winners"
     end
 
-puts "Would like to play again? (yes/no)"
-new_game = gets.chomp
+
         end
 
    
@@ -93,4 +91,6 @@ players = greeting_players
 
 if players
     game_strategy(players[0], players[1])
+    puts "Would like to play again? (yes/no)"
+play_again = gets.chomp
 end
