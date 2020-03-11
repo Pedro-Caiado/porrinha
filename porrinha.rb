@@ -21,11 +21,12 @@ end
 def greeting_players
     player_1 = checking_input("Enter your name player_1")
     player_2 = checking_input("Enter your name player_2")
-    input = checking_input("Have you guys been drinking today? (y/n)")
     
-    sleep 2   
+    puts "WELCOME, #{player_1} and #{player_2}!".colorize(:red)
+    sleep 1
 
-    # input = .gets.chomp	# need to check input
+    input = checking_input("Have you guys been drinking today? (y/n)")
+
     if input == "y"
         system('clear')
         puts "Great, you are ready to play!!"
