@@ -53,9 +53,12 @@ def greeting_players
         puts "Sorry, you guys are too drunk to play!"
     end
 end
-new_game = "yes"
-def game_strategy(player_1, player_2)
 
+
+def game_strategy(player_1, player_2)
+    new_game = "yes"
+    while new_game == "yes"
+    
     puts "HOW MANY STICKS WILL YOU SHOW THE OTHER PLAYER?"
     
     hand_player1 = getting_input_number("#{player_1}, type the number of sticks in your hand ___:", 4)
@@ -81,7 +84,7 @@ def game_strategy(player_1, player_2)
 
 puts "Would like to play again? (yes/no)"
 new_game = gets.chomp
-
+        end
 
    
 end
