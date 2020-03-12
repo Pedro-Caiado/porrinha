@@ -25,7 +25,7 @@ end
 def getting_input_number(text, sticks, show=false)
     puts text
     input = STDIN.noecho(&:gets).chomp.to_i
-    while input <= 0 or input >= sticks
+    while input <= -1 or input >= sticks
         puts "Invalid, try it again"
         input = STDIN.noecho(&:gets).chomp.to_i
     end
@@ -64,10 +64,10 @@ def game_strategy(player_1, player_2)
  
         puts "HOW MANY STICKS WILL YOU SHOW THE OTHER PLAYER?"
         
-        hand_player1 = getting_input_number("#{player_1}, type the number of sticks in your hand ___:", 3)
-        hand_player2 = getting_input_number("#{player_2}, type the number of sticks in your hand? ___:", 3)
-        guess1 = getting_input_number("#{player_1}, What's your guess? ___:", 6, true)
-        guess2 = getting_input_number("#{player_2}, What's your guess? ___:", 6, true)
+        hand_player1 = getting_input_number("#{player_1}, type the number of sticks in your hand ___:", 4)
+        hand_player2 = getting_input_number("#{player_2}, type the number of sticks in your hand? ___:", 4)
+        guess1 = getting_input_number("#{player_1}, What's your guess? ___:", 7, true)
+        guess2 = getting_input_number("#{player_2}, What's your guess? ___:", 7, true)
 
 
         puts "hp_1 #{hand_player1} hp_2: #{hand_player2}"
