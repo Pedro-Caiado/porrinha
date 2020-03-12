@@ -85,6 +85,7 @@ def game_strategy(player_1, player_2)
         else
             result_guess != guess1 or guess2
             puts "No winners"
+        
         end
 
 end
