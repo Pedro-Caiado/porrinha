@@ -1,5 +1,11 @@
 require 'colorize'     
+require 'tty-font'
+require "pastel"
 require 'io/console'
+
+pastel = Pastel.new
+font = TTY::Font.new(:doom)
+puts pastel.yellow(font.write("porrinha"))
 
 
 def checking_input(message)
@@ -56,31 +62,38 @@ end
 
 
 def game_strategy(player_1, player_2)
-    puts "HOW MANY STICKS WILL YOU SHOW THE OTHER PLAYER?"
-    
-    hand_player1 = getting_input_number("#{player_1}, type the number of sticks in your hand ___:", 4)
-    hand_player2 = getting_input_number("#{player_2}, type the number of sticks in your hand? ___:", 4)
-    guess1 = getting_input_number("#{player_1}, What's your guess? ___:", 6, true)
-    guess2 = getting_input_number("#{player_2}, What's your guess? ___:", 6, true)
+    game_over = false
+    while game_over == false
+        puts "HOW MANY STICKS WILL YOU SHOW THE OTHER PLAYER?"
+        
+        hand_player1 = getting_input_number("#{player_1}, type the number of sticks in your hand ___:", 3)
+        hand_player2 = getting_input_number("#{player_2}, type the number of sticks in your hand? ___:", 3)
+        guess1 = getting_input_number("#{player_1}, What's your guess? ___:", 6, true)
+        guess2 = getting_input_number("#{player_2}, What's your guess? ___:", 6, true)
 
 
-    puts "hp_1 #{hand_player1} hp_2: #{hand_player2}"
-    result_guess = hand_player1 + hand_player2
-    puts "Calculating the result of #{hand_player1} + #{hand_player2} Loading..."
-    sleep 1
-    puts "#{result_guess}"
+        puts "hp_1 #{hand_player1} hp_2: #{hand_player2}"
+        result_guess = hand_player1 + hand_player2
+        puts "Calculating the result of #{hand_player1} + #{hand_player2} Loading..."
+        sleep 1
+        puts "#{result_guess}"
 
-    if result_guess == guess1
-        puts "#{player_1}, congratulations!"
-    elsif result_guess == guess2
-        puts "#{player_2}, congratulations!"
-    else
-        result_guess != guess1 or guess2
-        puts "No winners"
+        if result_guess == guess1
+            puts "#{player_1}, congratulations!"
+            game_pver = true
+        elsif result_guess == guess2
+            puts "#{player_2}, congratulations!"
+            game_pver = true
+
+        else
+            result_guess != guess1 or guess2
+            puts "No winners"
+        end
     end
 end
 
 players = greeting_players
+
 
 if players
     playing = true
