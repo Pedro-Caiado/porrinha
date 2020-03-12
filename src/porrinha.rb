@@ -5,7 +5,7 @@ require 'io/console'
 
 pastel = Pastel.new
 font = TTY::Font.new(:doom)
-puts pastel.yellow(font.write("porrinha"))
+puts pastel.green(font.write("porrinha"))
 
 def checking_input(message)
     correct_input = false
