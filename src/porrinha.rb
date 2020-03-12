@@ -76,13 +76,13 @@ def game_strategy(player_1, player_2)
         sleep 1
         puts "#{result_guess}"
 
-        if result_guess == guess1
-            puts "#{player_1}, congratulations!"
-            game_pver = true
-        elsif result_guess == guess2
-            puts "#{player_2}, congratulations!"
-            game_pver = true
 
+        if guess1 == guess2
+            puts "draw"     
+        elsif result_guess == guess1
+            puts "#{player_1}, congratulations!"  
+        elsif result_guess == guess2
+            puts "#{player_2}, congratulations!"  
         else
             result_guess != guess1 or guess2
             puts "No winners"
