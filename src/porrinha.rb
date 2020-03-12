@@ -30,8 +30,7 @@ def getting_input_number(text, sticks, show=false)
         input = STDIN.noecho(&:gets).chomp.to_i
     end
     if show
-        puts input
-        
+        puts input  
     end
     return input 
 end
