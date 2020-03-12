@@ -3,6 +3,7 @@ require 'tty-font'
 require "pastel"
 require 'io/console'
 
+
 pastel = Pastel.new
 font = TTY::Font.new(:doom)
 puts pastel.green(font.write("porrinha"))
@@ -108,3 +109,5 @@ if players
     end
 
 end
+
+
