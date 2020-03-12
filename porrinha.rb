@@ -54,10 +54,8 @@ def greeting_players
     end
 end
 
-play_again = "yes"
-while play_again == "yes"
+
 def game_strategy(player_1, player_2)
-    
     puts "HOW MANY STICKS WILL YOU SHOW THE OTHER PLAYER?"
     
     hand_player1 = getting_input_number("#{player_1}, type the number of sticks in your hand ___:", 4)
@@ -80,17 +78,22 @@ def game_strategy(player_1, player_2)
         result_guess != guess1 or guess2
         puts "No winners"
     end
-
-
-        end
-
-   
 end
 
 players = greeting_players
 
 if players
-    game_strategy(players[0], players[1])
-    puts "Would like to play again? (yes/no)"
-play_again = gets.chomp
+    playing = true
+    until playing == false 
+        game_strategy(players[0], players[1])
+        input = checking_input("Would like to play again? (y/n)")
+        if input == "yes" or input == "y" 
+            puts "play again"
+        else
+            puts "Good bye"
+            playing = false
+        end
+    
+    end
+
 end
