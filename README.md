@@ -1,11 +1,8 @@
-referenced sources
-R4 Provide a link to your source control repository
 
-[Click this link!](www.google.com)
+                                                        TERMINAL APPLICATION – PORRINHA
 
+Application Development Plan 
 
-TERMINAL APPLICATION – PORRINHA
-R4 - Application Development Plan 
 First of all, before starting a project, an idea must be created, and developed, so the developer has a broad view of the line of action to be taken. This line of crossing will be a goal to be reached, and also a reduction in the expensive hourly work, as well as salary, if necessary, by the employer.
 Regardless of the purpose of the project, it like everything else, will have goal set before start building it, which will be followed by a beginning, a middle and an end.
 The project developed has followed the bellow criteria.
@@ -22,7 +19,8 @@ The project developed has followed the bellow criteria.
 -	Workbook has been done together while the application was processed by the developer;
 -	Project closure;
 
-R5 - Develop a statement of purpose and scope – Interaction and Experience  
+Purpose and scope
+
 Porrinha is a game implemented in Brazil. Several people play this game in order to have fun and distraction. It is worth mentioning that the game has been used in the daily lives of each person. The game, has greater visibility and it’s used in city bars.
 The purpose of developing this application is to make people not only use the game in city bars, but also in their daily lives. As it is not a game much sought by society in general, people do not use that game directly. The intention, then, was to create this application so that people have a broader access to it. 
 Over the years, the internet, like the means of communication, has developed extremely fast and effectively, making access to technological information more accessible to the general public. Therefore, this game can then be accessed through the internet, thus generating credibility and, also, greater visibility to the game mentioned above.
@@ -37,7 +35,8 @@ Another important feature is the input method, in which the user can share perso
 Finally, last but not least impotent. It is the feature in which the player will be able to interact with the computer, since the computer will utilise outputs, placing messages on the computer screen, either through questions, statements and also answers.
 
 
-R7 - Develop an outline of the user interaction and experience for the application
+Interaction and Experience for the Application
+
 In the game in question, it is worth mentioning that the user will have access to the means of installing the game (explained separately in another document).
 The players can have access to the Flow Diagram, click on the link below.
 
@@ -62,12 +61,11 @@ RULES. HOW IS IT PLAYED?
 -	Whoever guess correctly the SUM OF STICKS in both player’s hand, will win the round;
 -	The game keeps on going till one of the players have no sticks left in their hands;
 
--	The game seems silly but if you got a good logical thinking, you will probably do well while playing it, unless if you are too pissed to think about anything. It’s a logical game though.
+Diagram – Control Flow on application
 
+![alt text](docs/Diagram.png)
 
-R8 - Develop a diagram – Control Flow on app
-
-R9 - implementation plan
+Implementation Plan
 
 For the implementation of the application, it was necessary to use basic and advanced knowledge of each material studied in class. Not all the materials taught in the class were applied in the development of the project, even though was necessary to know the existence of each one, facilitating the research and also in the methods applied for the creation of the game
 The knowledge of how to use the terminal was essential for the development of the game and also for its creation. Considering that, throughout the terminal folders, files, checks were done.
@@ -80,7 +78,10 @@ If the player has followed the requirements for the game, he will be taken to th
 It was also used, the “system (‘ clear ”), so that the player has the comfort of organization in the game having a clear screen while playing.
 After finish the game, it was necessary to create a variable and also “input”, so the player is asked to play again. This variable was named "play_again". A variable was used outside the “method”, so the user can choose whether he wants to play again or end the game.
 
-R10 – Instructions - describe how to use and install the application
+To make sure that all the instructions warer followed step by step and to keep all the material and concpets organised, was used the a web site called trello. In case the link is provided below.
+https://trello.com/b/FYjjl2E2/porrinha
+
+Install Application
 
 To perform the application, the only requirement is to have a ruby version greater than or equal to 1.9
 On the terminal, or WSL type. Then, follow the prompts 
@@ -88,12 +89,23 @@ Ruby porrinha.rb
 All computers can have access to the game. To have a better quality it’s recommended a Mac, linux or Windows at least year 2016.
 
 
+Referenced sources
 
-SLIDE DECK
--	PRESENTATION – 
--	how THE APP is used.
--	A walk-through of the logic of your Terminal application and code.
--	A review of your development/build process including challenges, ethical issues, favourite parts, etc.
+ - <a href=“https://rubygems.org/gems/colorize”>colorize
+</a>
 
+ - <a href=“https://rubygems.org/gems/tty-font”>tty-font
+</a>
 
+<a href=“https://rubygems.org/gems/pastel”>pastel
+</a>
 
+- https://coderacademy.instructure.com/courses/290
+
+- https://github.com/Pedro-Caiado
+
+- https://stackoverflow.com/
+
+- https://trello.com/b/FYjjl2E2/porrinha
+
+- https://rubygems.org/gems
