@@ -97,7 +97,7 @@ Referenced sources
  - <a href=“https://rubygems.org/gems/tty-font”>tty-font
 </a>
 
-<a href=“https://rubygems.org/gems/pastel”>pastel
+ - <a href=“https://rubygems.org/gems/pastel”>pastel
 </a>
 
 - https://coderacademy.instructure.com/courses/290
