@@ -1,6 +1,10 @@
 
                                                         TERMINAL APPLICATION – PORRINHA
 
+Github 
+
+https://github.com/Pedro-Caiado/porrinha
+
 Application Development Plan 
 
 First of all, before starting a project, an idea must be created, and developed, so the developer has a broad view of the line of action to be taken. This line of crossing will be a goal to be reached, and also a reduction in the expensive hourly work, as well as salary, if necessary, by the employer.
@@ -102,7 +106,7 @@ Referenced sources
 
 - https://coderacademy.instructure.com/courses/290
 
-- https://github.com/Pedro-Caiado
+- https://github.com/Pedro-Caiado/porrinha
 
 - https://stackoverflow.com/
 
